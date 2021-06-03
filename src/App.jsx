@@ -1,6 +1,9 @@
 import React from "react";
 import "./App.css";
 import ContextComponentC from "./components/ContextComponentC";
+import CounterOne from "./components/CounterOne";
+import CounterThree from "./components/CounterThree";
+import CounterTwo from "./components/CounterTwo";
 
 export const userContext = React.createContext();
 export const channelContext = React.createContext();
@@ -11,11 +14,9 @@ const App = () => {
   };
   return (
     <div className="App text-2xl my-8">
-      <userContext.Provider value={"Sanja"}>
-        <channelContext.Provider value={channel}>
-          <ContextComponentC />
-        </channelContext.Provider>
-      </userContext.Provider>
+      <CounterOne />
+      <CounterTwo />
+      <CounterThree />
     </div>
   );
 };
